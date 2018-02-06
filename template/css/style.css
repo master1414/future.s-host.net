@@ -1,0 +1,82 @@
+/*start reset*/
+body, div, dl, dt,dd, ul,ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, hr, td {
+margin:0; padding:0;
+}	
+table {
+	border-collapse:collapse; border-spacing:0;
+}
+fieldset, img {
+	border:0;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style:normal; font-weight:normal;
+}
+ol, ul {
+	list-style:none;
+}
+caption, th {
+	text-align:left;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:100%; font-weight:normal;
+}
+q:before, q:after {
+	content:'';
+}
+abbr, acronum {
+	border:0;
+}
+/*end reset*/
+
+html, body {
+	height:100%;
+	font:normal 12px/18px Arial, san-serif;
+}
+
+h2 {
+margin:30px 0 0 20px;
+font-size:18px;
+}
+.nav_list {
+margin:20px;
+width:200px;
+list-style:block;
+}
+.nav_list li {
+position:relative;
+}
+.nav_list li a {
+padding:5px 10px 5px 20px;
+display:block;
+font-size:14px;
+/*font-weight:bold;*/
+color:#696763;
+
+text-decoration:none;
+/*background:#ebebeb;*/
+/*border-bottom:1px solid #d4d9df*/
+}
+
+}
+.nav_list li.active span {
+border-top:6px solid #000;
+border-left:3px solid transparent;
+border-right:3px solid transparent;
+}
+
+.nav_list ul {
+margin:0;
+display:none;
+}
+.nav_list ul li {
+position:static;
+}
+.nav_list ul a  {
+padding-left:30px;
+font-size:12px;
+color:#8b8b8b;
+/*background:#ededed;*/
+}
+/*====================*/
+
+
