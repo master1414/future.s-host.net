@@ -144,4 +144,17 @@ $arrUrlSav = array();
         
         return true;
     }
+     /**
+     * Action для страницы "Кабинет пользователя"
+     */
+    public function actionManual()
+    {
+        // Получаем идентификатор пользователя из сессии
+        $userId = User::checkLogged();
+
+        // Подключаем вид
+        require_once(ROOT . '/views/cabinet/manual.php');
+        return true;
+    }
+    
 }

@@ -17,7 +17,7 @@ class SiteController
         $categories2 = Category::getCategoriesList2();
 
         // Список последних товаров
-        $latestProducts = Product::getLatestProducts(6);
+        $latestProducts = Product::getLatestProducts(12);
 
         // Список товаров для слайдера
         $sliderProducts = Product::getRecommendedProducts();
@@ -56,7 +56,7 @@ class SiteController
             if ($errors == false) {
                 // Если ошибок нет
                 // Отправляем письмо администратору 
-                $adminEmail = 'php.start@mail.ru';
+                $adminEmail = 'master1414@outlook.com';
                 $message = "Текст: {$userText}. От {$userEmail}";
                 $subject = 'Тема письма';
                 $result = mail($adminEmail, $subject, $message);

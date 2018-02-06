@@ -118,9 +118,10 @@ public function actionCreate2()
             $name = $_POST['name'];
             $sortOrder = $_POST['sort_order'];
             $status = $_POST['status'];
-
+            $category_id = $_POST['category_id'];
+            
             // Сохраняем изменения
-            Category::updateCategoryById($id, $name, $sortOrder, $status);
+            Category::updateCategoryById2($id, $name, $sortOrder, $status,$category_id);
 
             // Перенаправляем пользователя на страницу управлениями категориями
             header("Location: /admin/category");
