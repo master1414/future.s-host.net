@@ -15,7 +15,7 @@ return array(
     'cart/addAjax/([0-9]+)' => 'cart/addAjax/$1', // actionAddAjax в CartController
     'cart' => 'cart/index', // actionIndex в CartController
     // Пользователь:
-    
+    'cabinet/manual' => 'cabinet/manual',
     'user/register' => 'user/register',
     'user/login' => 'user/login',
     'user/logout' => 'user/logout',
