@@ -9,9 +9,9 @@ return array(
         'charset' => 'utf8'
     */
         'host' => 'localhost',
-        'dbname' => 'ubmbkpap_phpshop',
-        'user' => 'ubmbkpap_admin',
-        'password' => 'master(/&)1515',
+        'dbname' => '',
+        'user' => '',
+        'password' => '',
         'charset' => 'utf8'
          
 );
