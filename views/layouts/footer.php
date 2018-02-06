@@ -5,7 +5,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <p class="pull-left">Copyright © 2018</p>
+                <p class="pull-left">Copyright © <?php echo(date('Y'))?></p>
                 <p class="pull-right">Кровля</p>
             </div>
         </div>
@@ -18,11 +18,10 @@
 <script src="/template/js/jquery.scrollUp.min.js"></script>
 <script src="/template/js/price-range.js"></script>
 <script src="/template/js/jquery.prettyPhoto.js"></script>
-<script src="/template/js/main+.js"></script>
-<script src="/template/js/script+.js"></script>
-<script src="/template/js/jquery-1.9.1.min+.js"></script>
 <script src="/template/js/jquery.accordion.js"></script>
 <script src="/template/js/jquery.cookie.js"></script>
+<script src="/template/js/main.js"></script>
+<script src="/template/js/script.js"></script>
 <script>
     $(".category").dcAccordion();
     $(document).ready(function(){

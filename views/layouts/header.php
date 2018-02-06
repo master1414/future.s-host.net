@@ -25,8 +25,9 @@ require_once ROOT . '/components/Seo.php';
         <link href="/template/css/animate.css" rel="stylesheet">
         <link href="/template/css/main.css" rel="stylesheet">
         <link href="/template/css/responsive.css" rel="stylesheet">
-        <link href="/template/css/style.css" rel="stylesheet">
         <link href="/template/css/style2.css" rel="stylesheet">
+        <link href="/template/css/style.css" rel="stylesheet">
+        
         <link href="/template/menu/css/main-menu.css" rel="stylesheet">
         
         <!--[if lt IE 9]>

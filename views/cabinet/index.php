@@ -10,6 +10,7 @@
             <ul>
                 <li><a href="/cabinet/edit">Редактировать данные пользователя</a></li>
                 <li><a href="/admin">Редактировать товары</a></li>
+                <li><a href="/cabinet/manual">Инструкция по использованию сайта</a></li>
                 <?php if($user['role'] === 'admin'):?>
                 <li><a href="/cabinet/parser">Парсер товаров</a></li>
                 <?php endif;?>
