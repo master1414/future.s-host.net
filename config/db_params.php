@@ -9,9 +9,9 @@ return array(
         'charset' => 'utf8'
     */
         'host' => 'localhost',
-        'dbname' => '',
-        'user' => '',
-        'password' => '',
+        'dbname' => 'n',
+        'user' => 'u',
+        'password' => 'p',
         'charset' => 'utf8'
          
 );
