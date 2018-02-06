@@ -34,7 +34,7 @@ public static function getCategoriesList2()
         // Соединение с БД
         $db = Db::getConnection();
         
-        $result = $db->query('SELECT id,parent, name, parent FROM category');
+        $result = $db->query('SELECT id, parent, name, parent FROM category WHERE status = "1" ORDER BY sort_order, name DESC');
         
         $categoryList2 = array();
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
@@ -119,6 +119,38 @@ public static function getCategoriesList2()
         $result->bindParam(':name', $name, PDO::PARAM_STR);
         $result->bindParam(':sort_order', $sortOrder, PDO::PARAM_INT);
         $result->bindParam(':status', $status, PDO::PARAM_INT);
+        return $result->execute();
+    }
+    /**
+     * Редактирование категории с заданным id с выпадающим списком
+     * @param integer $id <p>id категории</p>
+     * @param string $name <p>Название</p>
+     * @param integer $sortOrder <p>Порядковый номер</p>
+     * @param integer $category_id <p>id с выпадающего списка</p>
+     * @param integer $status <p>Статус <i>(включено "1", выключено "0")</i></p>
+     * @return boolean <p>Результат выполнения метода</p>
+     */
+    public static function updateCategoryById2($id, $name, $sortOrder, $status,$category_id)
+    {
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Текст запроса к БД
+        $sql = "UPDATE category
+            SET 
+                name = :name, 
+                sort_order = :sort_order, 
+                status = :status,
+                parent = :category_id
+            WHERE id = :id";
+
+        // Получение и возврат результатов. Используется подготовленный запрос
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->bindParam(':name', $name, PDO::PARAM_STR);
+        $result->bindParam(':sort_order', $sortOrder, PDO::PARAM_INT);
+        $result->bindParam(':status', $status, PDO::PARAM_INT);
+        $result->bindParam(':category_id', $category_id, PDO::PARAM_INT);
         return $result->execute();
     }
 

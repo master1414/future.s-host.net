@@ -241,7 +241,7 @@ class Product
         $db = Db::getConnection();
 
         // Получение и возврат результатов
-        $result = $db->query('SELECT id, name, price, code FROM product ORDER BY id ASC');
+        $result = $db->query('SELECT id, name, price, status, code FROM product ORDER BY id ASC');
         $productsList = array();
         $i = 0;
         while ($row = $result->fetch()) {
@@ -249,6 +249,7 @@ class Product
             $productsList[$i]['name'] = $row['name'];
             $productsList[$i]['code'] = $row['code'];
             $productsList[$i]['price'] = $row['price'];
+            $productsList[$i]['status'] = $row['status'];
             $i++;
         }
         return $productsList;
